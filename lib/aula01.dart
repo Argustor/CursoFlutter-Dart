@@ -1,5 +1,3 @@
-import 'dart:io';
-
 void show() {
   // print
   print('Olá mundo');
@@ -8,33 +6,21 @@ void show() {
   String nome = "Rafael";
   print("Seu nome é: " + nome);
 
-  // input
-  print('Digite seu Nome: ');
-  nome = stdin.readLineSync()!;
-  print("Seu nome é: " + nome);
-
   // interpolaçao de string
   print("Seu nome é: $nome");
 
   // Variavel int
   // operadores aritmeticos: + - * / %
-  print('Digite um número: ');
-  String input = stdin.readLineSync()!;
-  int numero = int.parse(input);
+  int numero = 5;
   int resultado = numero + 5;
   print("Resultado: $resultado");
 
   // Variavel double
-  print('Digite um número: ');
-  input = stdin.readLineSync()!;
-  numero = int.parse(input);
   double res = numero / 2;
   print("Resultado: $res");
 
   // variavel bool
-  print('Digite sua idade: ');
-  input = stdin.readLineSync()!;
-  int idade = int.parse(input);
+  var idade = 20;
   bool deMaior = true;
   deMaior = idade > 17;
   print(deMaior);
@@ -55,54 +41,36 @@ void show() {
     print('É de menor');
   }
 
-  
-  
+  // if ternario
+  print(idade > 17 ? 'É de maior' : 'É de menor');
 
-
-  
-  // atividade 1 - calculadora
-
-  print('''
-1 - Somar
-2 - Subtrair
-3 - Multiplicar
-4 - Dividir
-Escolha uma opção:''');
-  int opcao = int.parse(stdin.readLineSync()!);
-
-  if (opcao == 1){
-    print("Digite um número: ");
-    int n1 = int.parse(stdin.readLineSync()!);
-    print("Digite outro número: ");
-    int n2 = int.parse(stdin.readLineSync()!);
-
-    print("$n1 + $n2 = ${n1+n2}");
+  // else if
+  if (idade < 14){
+    print("Criança");
   }
-  else if (opcao == 2){
-    print("Digite um número: ");
-    int n1 = int.parse(stdin.readLineSync()!);
-    print("Digite outro número: ");
-    int n2 = int.parse(stdin.readLineSync()!);
-
-    print("$n1 - $n2 = ${n1-n2}");
+  else if (idade < 20){
+    print("Adolescente");
   }
-  else if (opcao == 3){
-    print("Digite um número: ");
-    int n1 = int.parse(stdin.readLineSync()!);
-    print("Digite outro número: ");
-    int n2 = int.parse(stdin.readLineSync()!);
-
-    print("$n1 * $n2 = ${n1*n2}");
+  else {
+    print("Adulto");
   }
-  else if (opcao == 4){
-    print("Digite um número: ");
-    int n1 = int.parse(stdin.readLineSync()!);
-    print("Digite outro número: ");
-    int n2 = int.parse(stdin.readLineSync()!);
 
-    print("$n1 / $n2 = ${n1/n2}");
+
+  // atividade - if/else
+  int n = 2;
+  if (n > 0){
+    print("$n é maior que 0");
+  }
+  else if (n < 0){
+    print("$n é menor que 0");
   }
   else{
-    print("Opção inválida");
+    print("O número é 0");
   }
+  
+  
+
+
+  
+
 }
