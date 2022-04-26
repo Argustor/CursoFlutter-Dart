@@ -42,9 +42,9 @@ void show() {
     print('É de menor');
   }
 
-  idade > 17 ? print('É de maior') : print('É de menor');
-
   // if ternario
+  idade > 17 ? print('É de maior') : print('É de menor');
+  
   print(idade > 17 ? 'É de maior' : 'É de menor');
 
 
@@ -57,6 +57,15 @@ void show() {
   }
   else {
     print('O maior é $n2');
+  }
+
+  // módulo exemplo
+  int n3 = 5;
+  if (n3 % 2 == 0){
+    print('$n3 é par');
+  }
+  else{
+    print('$n3 é ímpar');
   }
 
   // else if
@@ -83,9 +92,4 @@ void show() {
     print("O número é 0");
   }
   
-  
-
-
-  
-
 }
