@@ -21,6 +21,7 @@ void show() {
 
   // variavel bool
   var idade = 20;
+  // idade = "vinte"; erro
   bool deMaior = true;
   deMaior = idade > 17;
   print(deMaior);
@@ -41,8 +42,22 @@ void show() {
     print('É de menor');
   }
 
+  idade > 17 ? print('É de maior') : print('É de menor');
+
   // if ternario
   print(idade > 17 ? 'É de maior' : 'É de menor');
+
+
+  // atividade - maior numero
+  int n1 = 10;
+  int n2 = 8;
+
+  if (n1 > n2){
+    print('O maior é $n1');
+  }
+  else {
+    print('O maior é $n2');
+  }
 
   // else if
   if (idade < 14){
@@ -56,7 +71,7 @@ void show() {
   }
 
 
-  // atividade - if/else
+  // atividade - maior, menor ou igual a zero
   int n = 2;
   if (n > 0){
     print("$n é maior que 0");
