@@ -34,7 +34,7 @@ class Bicicleta extends Veiculo{
 
   Bicicleta(String marca, String modelo) : super(marca, modelo);
   
-  // polimorfismo - sobrescrita de funções
+  // polimorfismo - sobrescrita de método
   @override
   void mover(){
     posicao+=2;
