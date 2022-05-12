@@ -130,11 +130,11 @@ class WidgetsBasicos2 extends StatelessWidget {
                 width: 10,
               ),
             ),
-            child: Image(
-              width: 200,
-              image: NetworkImage(
-                  'https://img.r7.com/images/top-100-hora-7-errado-google-24092021021515245?dimensions=771x420&no_crop=true'),
-            ),
+            // child: Image(
+            //   width: 200,
+            //   image: NetworkImage(
+            //       'https://img.r7.com/images/top-100-hora-7-errado-google-24092021021515245?dimensions=771x420&no_crop=true'),
+            // ),
           ),
           Container(
             decoration: BoxDecoration(
