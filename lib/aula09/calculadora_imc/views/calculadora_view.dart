@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../calculadora.dart';
 import '../constants.dart';
 import '../views/results_view.dart';
 import '../widgets/bottom_button.dart';
@@ -17,6 +18,7 @@ class _CalculadoraState extends State<Calculadora> {
   int altura = 175;
   int idade = 20;
   int peso = 70;
+  String genero = "";
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +33,12 @@ class _CalculadoraState extends State<Calculadora> {
               children: [
                 Expanded(
                   child: CustomCard(
+                    cor: genero == "M" ? activeColor : cardColor,
+                    onPressed: () {
+                      setState(() {
+                        genero = "M";
+                      });
+                    },
                     child: IconLabel(
                       label: "Masculino",
                       icon: Icons.male,
@@ -39,6 +47,12 @@ class _CalculadoraState extends State<Calculadora> {
                 ),
                 Expanded(
                   child: CustomCard(
+                    cor: genero == "F" ? activeColor : cardColor,
+                    onPressed: () {
+                      setState(() {
+                        genero = "F";
+                      });
+                    },
                     child: IconLabel(
                       label: "Feminino",
                       icon: Icons.female,
@@ -162,11 +176,24 @@ class _CalculadoraState extends State<Calculadora> {
           ),
           BottomButton(
             label: "Calcular",
-            onPressed: () => Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => Results(),
-              ),
-            ),
+            onPressed: () {
+              CalculadoraIMC calculadora = CalculadoraIMC(
+                peso: peso,
+                altura: altura,
+              );
+
+              calculadora.calcular();
+
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => Results(
+                    resultado: calculadora.getResultado(),
+                    descricao: calculadora.getDescricao(),
+                    valor: calculadora.getImc(),
+                  ),
+                ),
+              );
+            },
           )
         ],
       ),
