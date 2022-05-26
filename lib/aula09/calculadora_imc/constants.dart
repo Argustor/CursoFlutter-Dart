@@ -10,6 +10,10 @@ const Color iconButtonColor = Color(0x654C4F5E);
 const TextStyle labelStyle = TextStyle(fontSize: 18, color: Colors.grey);
 const TextStyle bigText = TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
 
-final TextStyle resultStyle = TextStyle(fontWeight: FontWeight.bold, fontSize: 22, color: Colors.green.withBlue(120));
-const TextStyle valueStyle = TextStyle(fontWeight: FontWeight.bold, fontSize: 70);
+final TextStyle resultStyle = TextStyle(
+    fontWeight: FontWeight.bold,
+    fontSize: 22,
+    color: Colors.green.withBlue(120));
+const TextStyle valueStyle =
+    TextStyle(fontWeight: FontWeight.bold, fontSize: 70);
 const TextStyle descriptionStyle = TextStyle(fontSize: 20);
