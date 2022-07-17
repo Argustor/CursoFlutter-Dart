@@ -1,2 +1,3 @@
-A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
+# CursoFlutter-Dart
+
+Repositório para a ministração do curso "Uma abordagem com Dart e Flutter para Desenvolvimento Mobile Híbrido".
